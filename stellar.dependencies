@@ -1,0 +1,22 @@
+[
+  {
+    "repository" : "Redmi-MT6768/android_kernel_xiaomi_mt6768",
+    "target_path": "kernel/xiaomi/mt6768",
+    "branch"     : "lineage-18.1"
+  },
+  {
+    "repository" : "Redmi-MT6768/android_vendor_xiaomi_lava",
+    "target_path": "vendor/xiaomi/lava",
+    "branch"     : "lineage-18.1"
+  },
+  {
+    "repository" : "Redmi-MT6768/android_device_xiaomi_mt6768-common",
+    "target_path": "device/xiaomi/mt6768-common",
+    "branch"     : "lineage-18.1"
+  },
+  {
+    "repository" : "PixelExperience/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "branch"     : "eleven"
+  }
+]

@@ -27,7 +27,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/stellar/config/common_full_phone.mk)
 
 #
 # All components inherited here go to system_ext image
@@ -35,9 +35,25 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
+# Bundle GApps
+STELLAR_BUILD_TYPE := gapps
+TARGET_GAPPS_ARCH := arm64
+
+# Add face unlock
+TARGET_FACE_UNLOCK_SUPPORTED = true
+
+# Ship with Lawnchair
+SHIPPING_WITH_LAWNCHAIR := true
+
+# Use Google Sans font
+SHIPPING_WITH_GSANS := true
+
+# Ship with AdAway
+SHIPPING_WITH_ADAWAY := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lava
-PRODUCT_NAME := lineage_lava
+PRODUCT_NAME := stellar_lava
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := xiaomi
 
